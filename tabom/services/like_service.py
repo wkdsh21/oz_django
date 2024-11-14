@@ -1,4 +1,4 @@
-from tabom.models import Like, Article, Like, User
+from tabom.models import Article, Like, User
 
 
 def do_like(user_id: int, article_id: int) -> Like:
