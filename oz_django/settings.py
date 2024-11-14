@@ -33,6 +33,7 @@ ALLOWED_HOSTS = ["*"]
 # Application definition
 
 INSTALLED_APPS = [
+    "tabom.apps.TabomConfig",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -80,8 +81,8 @@ DATABASES = {
         "ENGINE": "django.db.backends.mysql",
         "NAME": "oz_django6",
         "USER": "root",
-        "PASSWORD": "4463",
-        "HOST": "localhost",
+        "PASSWORD": "0000",
+        "HOST": "172.19.250.223",
         "PORT": "3306",
     }
 }
@@ -111,11 +112,11 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = "en-us"
 
-TIME_ZONE = "UTC"
+TIME_ZONE = "Asia/Seoul"
 
 USE_I18N = True
 
-USE_TZ = True
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)

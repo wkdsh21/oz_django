@@ -6,10 +6,10 @@ jobs:
   ci:
     runs-on: ubuntu-20.04
     env:
-      DB_HOST: 127.0.0.1
+      DB_HOST: 172.19.250.223
       DB_PORT: 3306
       DB_USER: root
-      DB_PASSWORD: 4463
+      DB_PASSWORD: 0000
       DB_DATABASE: oz_django6
 
     steps:
