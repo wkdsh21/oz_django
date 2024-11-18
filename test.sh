@@ -1,3 +1,4 @@
+#!/bin/zsh
 set -eo pipefail
 
 COLOR_GREEN=`tput setaf 2;`
