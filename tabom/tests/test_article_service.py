@@ -53,13 +53,14 @@ class TestArticleService(TestCase):
         articles = [Article.objects.create(title=f"{i}") for i in range(1, 21)]
         do_like(user.id, articles[-1].id)
 
-        # captureQueries쓰면 쿼리들을 문자열로 ctx에 넣어줌
-        with CaptureQueriesContext(connection) as ctx:
-            # When
+        # When
+        result_articles = get_article_list(0, 10)
+
+        # Then
+        with self.assertNumQueries(2):
             result_articles = get_article_list(0, 10)
             result_counts = [a.like_set.count() for a in result_articles]
 
-            # Then
             self.assertEqual(len(result_articles), 10)
             self.assertEqual(1, result_counts[0])
             self.assertEqual(
